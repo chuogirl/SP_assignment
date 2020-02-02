@@ -166,6 +166,24 @@ int depressionTest(char user_gender[])
 int outputResults(int average)
 {
     printf("\nAverage scores: %o\n", average);
+    // output results based on average score
+    switch (average)
+    {
+    case 1:
+        printf("BAD BAD");
+        break;
+    case 2:
+        printf("NOT BAD");
+        break;
+    case 3:
+        printf("GOOD");
+        break;
+    case 4:
+        printf("VERY GOOD");
+        break;
+    default:
+        break;
+    }
 }
 
 int averageScore(int scores[], int arr_size)
