@@ -42,7 +42,7 @@ int menu()
     if (strcmp(user_choice, "1") == 0)
     {
         // name accept 256 char
-        char user_name[char_size], user_gender[1], user_age[3];
+        char user_name, user_gender, user_age;
         printf("\nPlease enter your name: \n:");
         scanf("%s", user_name);
 
