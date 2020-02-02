@@ -173,16 +173,13 @@ int outputResults(int average)
         printf("No Depression Likely.\n You do not appear to be experiencing any depressive symptoms at this time.\n If this changes, you may need to seek further diagnosis and treatment.");
         break;
     case 2:
-        printf("Borderline Depression.\n You appear to be experiencing some very mild depressive symptoms, many of which are commonly found amongst the general population, but border on the possibility of a depressive episode.\n It is unclear whether or not you suffer these problems severely enough to need to seek further diagnosis and treatment.
-");
+        printf("Borderline Depression.\n You appear to be experiencing some very mild depressive symptoms, many of which are commonly found amongst the general population, but border on the possibility of a depressive episode.\n It is unclear whether or not you suffer these problems severely enough to need to seek further diagnosis and treatment.");
         break;
     case 3:
-        printf("Mild-Moderate Depression.\n You appear to be suffering from mild to moderate depressive symptoms commonly associated with depressive disorders.\n These symptoms appear to be causing you some noticeable signs of impairment and distress,\n and you would likely benefit from the attention of a trained mental health professional for further evaluation and a more accurate diagnosis.
-");
+        printf("Mild-Moderate Depression.\n You appear to be suffering from mild to moderate depressive symptoms commonly associated with depressive disorders.\n These symptoms appear to be causing you some noticeable signs of impairment and distress,\n and you would likely benefit from the attention of a trained mental health professional for further evaluation and a more accurate diagnosis.");
         break;
     case 4:
-        printf("Severely Depressed.\n You appear to be suffering from severe depressive symptoms commonly associated with serious depressive disorders,\n such as major depressive disorder, bipolar disorder or dysthymia.\n These symptoms seem to be causing you some serious impairment and distress in your normal, everyday functioning.\n You would likely benefit from the immediate attention of your physician or a trained mental health professional for further evaluation\n and a more accurate diagnosis and treatment.
-");
+        printf("Severely Depressed.\n You appear to be suffering from severe depressive symptoms commonly associated with serious depressive disorders,\n such as major depressive disorder, bipolar disorder or dysthymia.\n These symptoms seem to be causing you some serious impairment and distress in your normal, everyday functioning.\n You would likely benefit from the immediate attention of your physician or a trained mental health professional for further evaluation\n and a more accurate diagnosis and treatment.");
         break;
     default:
         break;
