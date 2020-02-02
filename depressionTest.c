@@ -139,7 +139,7 @@ int outputResults(int average)
     default:
         break;
     }
-    printf("\n\nPlease any key to continue...");
+    printf("\n\nPlease type c to continue...");
     scanf("%s");
 }
 
