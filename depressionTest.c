@@ -13,13 +13,24 @@
 int menu()
 {
     char user_choice[256];
+    printf("________                                            .__               \n");
+    printf("\\______ \\   ____ _____________   ____   ______ _____|__| ____   ____  \n");
+    printf(" |    |  \\_/ __ \\\\____ \\_  __ \\_/ __ \\ /  ___//  ___/  |/  _ \\ /    \\ \n");
+    printf(" |    `   \\  ___/|  |_> >  | \\/\\  ___/ \\___ \\ \\___ \\|  (  <_> )   |  \\ \n");
+    printf("/_______  /\\___  >   __/|__|    \\___  >____  >____  >__|\\____/|___|  /\n");
+    printf("        \\/     \\/|__|               \\/     \\/     \\/               \\/ \n");
+    printf("___________              __                                           \n");
+    printf("\\__    ___/___   _______/  |_                                         \n");
+    printf("  |    |_/ __ \\ /  ___/\\   __\\                                        \n");
+    printf("  |    |\\  ___/ \\___ \\  |  |                                          \n");
+    printf("  |____| \\___  >____  > |__|                                          \n");
+    printf("             \\/     \\/                                                \n");
 
     printf("\nMenu: \n1. Start Testing \ntype q to quit.\n:");
     scanf("%s", user_choice);
     // Start
     if (strcmp(user_choice, "1") == 0)
     {
-
         // name accept 256 char
         char user_name[char_size], user_gender[1], user_age[3];
         printf("\nPlease enter your name: \n:");
@@ -64,30 +75,52 @@ int menu()
 int depressionTest(char user_gender[])
 {
     int scores[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char questions[][char_size] = {
-        "test1: ",
-        "test2: ",
-        "test3: ",
-        "test4: ",
-        "test5: ",
-        "test6: ",
-        "test7: ",
-        "test8: ",
-        "test9: ",
-        "test10: ",
-        "test11: ",
-        "test12: ",
-        "test13: ",
-        "test14: ",
-        "test15: ",
-        "test16: ",
-        "test17: ",
-        "test18: ",
-        "test19: ",
-        "test20: ",
+    char questions_m[][char_size] = {
+        "test1: m",
+        "test2: m",
+        "test3: m",
+        "test4: m",
+        "test5: m",
+        "test6: m",
+        "test7: m",
+        "test8: m",
+        "test9: m",
+        "test10: m",
+        "test11: m",
+        "test12: m",
+        "test13: m",
+        "test14: m",
+        "test15: m",
+        "test16: m",
+        "test17: m",
+        "test18: m",
+        "test19: m",
+        "test20: m",
+    };
+    char questions_f[][char_size] = {
+        "test1: f",
+        "test2: f",
+        "test3: f",
+        "test4: f",
+        "test5: f",
+        "test6: f",
+        "test7: f",
+        "test8: f",
+        "test9: f",
+        "test10: f",
+        "test11: f",
+        "test12: f",
+        "test13: f",
+        "test14: f",
+        "test15: f",
+        "test16: f",
+        "test17: f",
+        "test18: f",
+        "test19: f",
+        "test20: f",
     };
 
-    int questions_arr_size = sizeof(questions) / sizeof(questions[0]);
+    int questions_arr_size = sizeof(questions_m) / sizeof(questions_m[0]);
 
     printf("\nTest start, in this test, \nwe personalized the test based on your gender, \nto gain the most from this test, please answer the question as intuitive as possible.\n");
     sleep(2);
@@ -96,7 +129,14 @@ int depressionTest(char user_gender[])
     for (int i = 0; i < questions_arr_size; i++)
     {
         char temp_score[] = {"0"};
-        printf("\n%s\n", questions[i]);
+        if (strcmp(user_gender, "m") == 0)
+        {
+            printf("\n\n%s\n", questions_m[i]);
+        }
+        else
+        {
+            printf("\n\n%s\n", questions_f[i]);
+        }
         sleep(1);
         while (!(strcmp(temp_score, "1") == 0 ||
                  strcmp(temp_score, "2") == 0 ||
