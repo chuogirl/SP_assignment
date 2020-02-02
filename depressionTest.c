@@ -11,10 +11,6 @@ int averageScore(int scores[], int arr_size)
     return total;
 }
 
-char collect_user_info()
-{
-}
-
 void main()
 {
     // initialize
