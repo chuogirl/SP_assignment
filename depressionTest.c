@@ -39,7 +39,7 @@ int depressionTest(char user_gender[])
         "11) I feel that I am a guilty person who deserves to be punished.",
         "12) I feel like a failure.",
         "13) I feel lifeless more dead than alive.",
-        "14) I’m getting too much, too little or not enough restful sleep.",
+        "14) I am getting too much, too little or not enough restful sleep.",
         "15) I spend time thinking about HOW I might kill myself.",
         "16) I feel trapped or caught.",
         "17) I feel depressed even when good things happen to me.",
@@ -52,7 +52,7 @@ int depressionTest(char user_gender[])
         "1) Have you dropped many of your activities and interests?",
         "2) Do you feel that your life is empty?",
         "3) Do you often get bored?",
-        "4) Are you bothered by thoughts you can’t get out of your head?",
+        "4) Are you bothered by thoughts you can not get out of your head?",
         "5) Are you afraid that something bad is going to happen to you?",
         "6) Do you often get restless and fidgety?",
         "7) Do you prefer to stay at home rather than go out and do things?",
@@ -68,7 +68,7 @@ int depressionTest(char user_gender[])
         "17) Do you prefer to avoid social occasions?",
         "18) Do you often feel helpless?",
         "19) I believe I cause problems for others.",
-        "20) I don’t have much of an appetite and eat less than usual.",
+        "20) I do not have much of an appetite and eat less than usual.",
     };
 
     int questions_arr_size = sizeof(questions_m) / sizeof(questions_m[0]);
@@ -139,6 +139,8 @@ int outputResults(int average)
     default:
         break;
     }
+    printf("\n\nPlease any key to continue...");
+    scanf("%s");
 }
 
 // A function to display menu page
