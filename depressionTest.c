@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// These headers is for exit(0), took Unix OS into consideration.
 #ifdef _WIN32
 #include <Windows.h>
 #else
@@ -10,6 +11,9 @@
 
 #define char_size 256
 
+/** A function to display menu page
+This is a function to let user choose whether to take the test (or retest as after the test complete it will return to this page) or quit the program
+*/
 int menu()
 {
     char user_choice[256];
@@ -28,6 +32,12 @@ int menu()
 
     printf("\nMenu: \n1. Start Testing \ntype q to quit.\n:");
     scanf("%s", user_choice);
+
+    /** Menu options
+    1 = Start test
+    q = quit
+    other = call menu() again recursively
+    */
     // Start
     if (strcmp(user_choice, "1") == 0)
     {
@@ -129,6 +139,7 @@ int depressionTest(char user_gender[])
     for (int i = 0; i < questions_arr_size; i++)
     {
         char temp_score[] = {"0"};
+        // if user is male, use questions_m question set, else questions_f
         if (strcmp(user_gender, "m") == 0)
         {
             printf("\n\n%s\n", questions_m[i]);
@@ -137,6 +148,7 @@ int depressionTest(char user_gender[])
         {
             printf("\n\n%s\n", questions_f[i]);
         }
+
         sleep(1);
         while (!(strcmp(temp_score, "1") == 0 ||
                  strcmp(temp_score, "2") == 0 ||
@@ -153,8 +165,8 @@ int depressionTest(char user_gender[])
             }
         }
 
+        // store the user choice to the respective scores array item
         scores[i] = atoi(temp_score);
-        printf("%o", scores[i]);
     }
 
     // Process data
@@ -199,6 +211,6 @@ int averageScore(int scores[], int arr_size)
 
 void main()
 {
-    // Menu
+    // Display Menu Page()
     menu();
 }
